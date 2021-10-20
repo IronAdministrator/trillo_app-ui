@@ -20,6 +20,14 @@
   --line: 0.1rem solid var(--color-grey-light-2);
 }
 
+// breakpoints
+$bp-largest: 75em; // 1200px/16=75
+$bp-large: 68.75em; // 1100px/16=68.75
+$bp-medium: 56.25em; // 900px/16=56.25
+$bp-small: 37.5em; // 600px/16=37.5
+$bp-smallest: 31.25em; // 500px/16=31.25
+$bp-se: 25em; // 400px/16=25
+
 * {
   margin: 0;
   padding: 0;
@@ -34,6 +42,10 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; // defining 1rem to 10px (10px/16px=62.5%)
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%;
+  }
 }
 
 body {
